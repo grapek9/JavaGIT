@@ -13,7 +13,11 @@ public class NthDigit {
         System.out.println("lolz"+Digit);
         System.out.println("NthDigitPI");
         printA(Digit);
-
+        char test[]=new char[10];
+        test[0]=(char)5.1;
+        System.out.println("lozl"+test[0]);
+        test[0]=(char)Digit;
+        System.out.println("lozl"+test[0]);
 
     }
     public static void printA(int a){
