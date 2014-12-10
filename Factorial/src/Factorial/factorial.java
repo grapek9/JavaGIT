@@ -12,6 +12,7 @@ public class factorial{
         System.out.println("Typed Digit/Number = "+digit);
         System.out.println("Iteration Factorial = "+iterationFactorial(n));
         System.out.println("Recursion Factorial = "+recursionFactorial(n));
+        System.out.println("Dynamic Factorial = "+dynamicFactorial(n));
     }
     public static int iterationFactorial(int n){
         int digit=1;
@@ -25,6 +26,15 @@ public class factorial{
 
         if(n==0) return 1;
         return n*recursionFactorial(n-1);
+    }
+    public static int dynamicFactorial(int n){
+    int array[] = new int[n+1];
+        array[1]=1;
+        for(int i=2;i<=n;i++){
+
+            array[i]=i*array[i-1];
+        }
+        return array[n];
     }
 
 }
