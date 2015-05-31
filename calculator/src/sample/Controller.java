@@ -1,8 +1,8 @@
 package sample;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextInputControl;
 import javafx.fxml.FXML;
-
 import java.io.IOException;
 
 public class Controller{
@@ -39,22 +39,37 @@ public class Controller{
         input.appendText("9");
     }
     public void btnPlus()throws IOException {
+        String expression= input.getText();
+        System.out.println(expression);
+
         input.appendText("+");
     }
     public void btnMinus()throws IOException {
+        String expression= input.getText();
+        System.out.println(expression);
         input.appendText("-");
     }
     public void btnMultiply()throws IOException {
+        String expression= input.getText();
+        System.out.println(expression);
         input.appendText("*");
     }
     public void btnDivide()throws IOException {
+        String expression= input.getText();
+        System.out.println(expression);
         input.appendText("/");
     }
     public void btnDot()throws IOException {
+        String expression= input.getText();
+        System.out.println(expression.substring(expression.length()));
+
         input.appendText(".");
     }
     public void btnResult()throws IOException {
-        input.appendText("RESULT");
+        String expression= input.getText();
+        System.out.println(expression);
+        calculate calc = new calculate();
+        System.out.println(calc.Filter(expression));
     }
 
     public void runTest()throws IOException {
